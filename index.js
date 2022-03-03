@@ -25,17 +25,23 @@ app.use(morgan('tiny'));
 // });
 
 //Routes
- 
+
 const userRoutes = require('./routes/user');
- 
+
+const categoriesRoutes = require('./routes/category');
+const productRoutes = require('./routes/products');
 
 // api routers
- 
 app.use('/api/v1/users', userRoutes);
- 
+
+app.use('/api/v1/categories', categoriesRoutes);
+app.use('/api/v1/products', productRoutes);
+
+
+
 
 // port
 const PORT = process.env.PORT || 8000
-app.listen(PORT, ()=> {
+app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
 })
