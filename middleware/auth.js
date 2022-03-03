@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-// const expressJwt = require("express-jwt")
+const expressJwt = require("express-jwt")
 
 async function authMiddleware(req, res, next) {
     const authHeader = req.headers.authorization;
