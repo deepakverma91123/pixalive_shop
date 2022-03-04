@@ -25,6 +25,7 @@ exports.addcategory = async (req, res) => {
         icon: req.body.icon,
         color: req.body.color,
     })
+    category.deepak();
     category = await category.save();
     if (!category) {
         res.status(400).send("Category cannot be created");

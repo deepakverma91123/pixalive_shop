@@ -38,12 +38,12 @@ const userSchema = new mongoose.Schema({
         default: ''
     },
     isAdmin: {
-        type: Boolean,
-        default: false
+        type: String,
+
     },
 })
 
-userSchema.virtual('id').get(function(){
+userSchema.virtual('id').get(function () {
     return this._id.toHexString();
 })
 

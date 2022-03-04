@@ -17,4 +17,8 @@ const categorySchema = new mongoose.Schema({
     },
 })
 
+categorySchema.methods.deepak= function(){
+    console.log(`my name is deepak ${this.name}`)
+}
+
 exports.Category = mongoose.model('Category', categorySchema)
