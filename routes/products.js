@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const productCtrl =require("../controller/productCtrl");
 const authMiddleware = require("../middleware/auth");
+const authadminMiddleware = require("../middleware/admin");
 
-router.post("/add",
+
+router.post("/add",authadminMiddleware,
 // authMiddleware, 
 productCtrl.isAddProduct);
 
